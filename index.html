@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets\style.css" />
+        <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8" />
+        <title>Hugo Samayoa III Portfolio</title>
+    </head>
+    <body>
+        <div class="top">
+            
+        </div>
+
+        <div id="sidenav" class="sidenav">
+            <a href="#"><i class="fa fa-home"></i> Home</a>
+            <a href="#"><i class="fa fa-user"></i> About</a>
+            <a href="#"><i class="fa fa-puzzle-piece"></i> Work</a>
+            <a href="#"><i class="fa fa-id-card"></i> Contact</a>
+        </div>
+
+        <div id="content">
+            <span id="navBtn" style="font-size:30px;cursor:pointer"><i class="fa fa-bars"></i></span>
+        </div>
+
+        <script>
+            document.getElementById("navBtn").addEventListener("click", toggleNav);
+
+            function toggleNav() {
+                var navSize = document.getElementById("sidenav").style.width;
+                if (navSize == "175px") {
+                    return close();
+                } else {
+                    return open();
+                }
+
+            }
+
+            function open() {
+                document.getElementById("sidenav").style.width = "175px";
+                document.getElementById("content").style.marginLeft = "175px";
+            }
+
+            function close() {
+                document.getElementById("sidenav").style.width = "0";
+                document.getElementById("content").style.marginLeft = "0";
+            }
+        </script>
+    </body>
+</html
