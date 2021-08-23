@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="top">
-            
+            <h1>Hugo Samayoa III</h1>
         </div>
 
         <div id="sidenav" class="sidenav">
@@ -19,7 +19,14 @@
         </div>
 
         <div id="content">
-            <span id="navBtn" style="font-size:30px;cursor:pointer"><i class="fa fa-bars"></i></span>
+            <span id="navBtn" style="font-size:30px;cursor:pointer;color:white;"><i class="fa fa-bars"></i></span>
+
+            <div class="slides">
+                <div class="slide1"> 
+                    <h1> Home </h1>
+                    <p>Almost every day there are articles written or posted about early specialization in sport versus athletes participating in multiple sports. Personally, I am a proponent of playing multiple sports as a child and doing so well into the teen years because there is plenty of evidence that this helps athletes build their movement pattern bank account and become very athletic. Having said that, there will come a time in an athlete’s career when they will discover what they excel at the most, and they will need to make a decision to specialize in that sport or to keep being a solid multi-sport athlete. The decision will come down to the following: do I want to excel at one sport or be good at many sports? This point in time will be different for every sport based on an athlete’s ideal age for peak performance. For example, a gymnast will need to specialize earlier because their peak performance age is typically earlier while endurance sport athletes tend to peak later. There was a great stat that came out after the 2019 Super Bowl that polled all of the players in that game that said that approximately 95 per cent of the participants were at least two-sport athletes growing up. What is important to note here is that those athletes all specialized at some point and became great football players but not</p>
+                </div>
+            </div>
         </div>
 
         <script>
@@ -43,6 +50,33 @@
             function close() {
                 document.getElementById("sidenav").style.width = "0";
                 document.getElementById("content").style.marginLeft = "0";
+            }
+
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function currentDiv(n) {
+                showDivs(slideIndex = n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-white", "");
+                }
+                x[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " w3-white";
             }
         </script>
     </body>

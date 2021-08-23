@@ -12,6 +12,11 @@ body {
     background-color: #ffe4e1;
 }
 
+.top h1 {
+    color: black;
+    text-align: center;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -48,6 +53,12 @@ body {
     bottom: 0;
     transition: margin-left .5s;
     padding: 16px;
+    background: url("./imgs/pencil.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    
+
 }
 
 #navBtn {
@@ -55,10 +66,19 @@ body {
 }
 
 
+.slide1 h1 {
+    text-align: center;
+    color: white;
+}
 
+.slide1 p {
+    text-align: center;
+    line-height: 2;
+    color: white;
+}
 
 @media screen and (max-height: 450px) 
     and (max-width: 450px) {
-        .sidenav {padding-top: 15px;}
+        .sidenav {padding-top: 75px;}
         .sidenav a {font-size: 18px;}
     }
